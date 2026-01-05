@@ -1,106 +1,88 @@
-# 🤖 VYN v1.0 - AI Assistant System
+# VYN v1.0
 
-<p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version">
-  <img src="https://img.shields.io/badge/python-3.10+-green.svg" alt="Python">
-  <img src="https://img.shields.io/badge/platform-linux-lightgrey.svg" alt="Platform">
-  <img src="https://img.shields.io/badge/license-Proprietary-red.svg" alt="License">
-</p>
-
-**VYN** (Voice Your Needs) - Asistente de IA autónomo con capacidades avanzadas de búsqueda web, ejecución de código, gestión de infraestructura remota y análisis de imágenes.
+VYN (Voice Your Needs) is an autonomous local AI agent designed for advanced web search, isolated code execution, remote infrastructure management, and image analysis.
 
 ---
 
-## ✨ Características
+## Technical Overview
 
-- 🔍 **Búsqueda Web Inteligente** con extracción completa de contenido
-- 🧪 **Sandbox de Código** con auto-corrección
-- 🤖 **Auto-Switching** entre modelos según la tarea
-- 🏠 **Gestión de Home Lab** via SSH
-- 🖼️ **Vision AI** para análisis de imágenes
-- 🧠 **Memoria Persistente** con base de datos SQLite
-- ⚙️ **100% Customizable** via setup wizard interactivo
+VYN is built to operate as a local-first system, prioritizing data sovereignty and low-latency execution. Unlike cloud-based assistants, VYN functions as an extension of the local environment, interacting directly with the system kernel and remote nodes via secure protocols.
 
 ---
 
-## 📥 Instalación
+## Core Functionalities
 
-### Prerequisitos
+* Smart Web Search: Context-aware query optimization with recursive content extraction.
+* Code Sandbox: Isolated execution environment with autonomous traceback analysis and self-correction.
+* Intelligent Orchestration: Dynamic model switching based on intent detection.
+* Infrastructure Management: Secure SSH integration for remote server administration.
+* Vision Integration: Local image analysis and terminal error visual diagnostics.
+* Long-term Memory: Persistent state management using SQLite databases.
+* Configuration: Interactive setup wizard for custom hardware optimization.
 
-1. **Ollama** debe estar instalado:
+---
+
+## Deployment
+
+### Prerequisites
+
+1. Ollama Runtime:
+
 ```bash
 curl -fsSL https://ollama.com/install.sh | sh
 sudo systemctl start ollama
+
 ```
 
-2. **Descargar al menos un modelo**:
+2. Base Model Requirement:
+
 ```bash
 ollama pull llama3.1:8b
+
 ```
 
-### Descargar VYN
+### Binary Installation (Linux x64)
 
-**Linux x64:**
 ```bash
-wget https://github.com/tu-usuario/vyn/releases/latest/download/vyn-linux-x64-v1.0.0
+wget https://github.com/Chriss-devv/vyn/releases/latest/download/vyn-linux-x64-v1.0.0
 chmod +x vyn-linux-x64-v1.0.0
 ./vyn-linux-x64-v1.0.0
+
 ```
 
-El setup wizard se ejecutará automáticamente en la primera ejecución.
+The interactive setup wizard will initialize upon the first execution to configure local paths and model preferences.
 
 ---
 
-## 💻 Uso Rápido
+## Basic Commands
 
-```bash
-> help                  # Ver comandos
-> busca noticias        # Búsqueda web
-> haz código python     # Generar código
-> config                # Ver configuración
-> salir                 # Salir
+```text
+help            Display available commands and modules
+search <query>  Execute optimized web search and synthesis
+code <prompt>   Generate and test code in the isolated sandbox
+config          View or modify local configuration
+exit            Terminate the session
+
 ```
 
 ---
 
-## 📝 Licencia
+## Security and Privacy
 
-**Propietaria** - Todos los derechos reservados
+VYN operates under a Zero-External-Dependency architecture. All inference, scraping, and execution remain within the local network.
 
-Este es software propietario. El código fuente NO está disponible públicamente.
-
-Para licencias comerciales o código fuente, contacta: license@vyn-ai.com
-
----
-
-## 🎯 Soporte
-
-- 📧 Email: support@vyn-ai.com
-- 🐛 Issues: [GitHub Issues](https://github.com/tu-usuario/vyn/issues)
-- 📖 Docs: [Wiki](https://github.com/tu-usuario/vyn/wiki)
+* Local-Only Inference: No data is transmitted to external AI providers.
+* No Telemetry: Zero tracking or usage reporting.
+* Isolated Sandbox: Script execution is contained to prevent system-wide side effects.
 
 ---
 
-## 🔒 Seguridad
+## License
 
-VYN ejecuta todo localmente. Tus datos nunca salen de tu máquina.
+Proprietary - All rights reserved.
 
-- ✅ Sin telemetría
-- ✅ Sin conexiones a servidores externos
-- ✅ Código ejecutado en sandbox aislado
+The source code is not publicly available. For commercial licensing or source access, contact: license@vyn-ai.com
 
 ---
 
-## ⚡ Características Técnicas
-
-- Basado en Ollama (modelos locales)
-- Arquitectura modular
-- Sistema de permisos en cascada
-- Graceful shutdown con signal handlers
-- Anti-alucinación con validación de fuentes
-
----
-
-**🎉 Desarrollado por Chris - Ingeniero TI**
-
-_Si te gusta VYN, dale una ⭐ al repositorio_
+**Developed by Chris-devv**
