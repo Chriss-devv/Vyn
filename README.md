@@ -1,4 +1,4 @@
-# VYN v1.0 - Autonomous Agent System
+# VYN v1.0
 
 VYN (Voice Your Needs) is a local-first orchestration layer designed to transform static LLMs into autonomous agents. It provides the "system hands" (tools, sandbox, and protocols) necessary for an AI model to interact safely and effectively with your local environment and remote infrastructure.
 
