@@ -1,0 +1,51 @@
+{
+    "models": {
+        "coding": "qwen2.5-coder:7b",
+        "research": "llama3.1:8b",
+        "vision": "llava:7b",
+        "sysadmin": "mistral:7b-instruct"
+    },
+    "homelab": {
+        "enabled": false,
+        "host": "",
+        "user": "root",
+        "ssh_key": "~/.ssh/id_ed25519",
+        "port": 22
+    },
+    "web_search": {
+        "enabled": true,
+        "max_results": 5,
+        "timeout": 10,
+        "extract_full_content": true
+    },
+    "sandbox": {
+        "enabled": true,
+        "directory": "/tmp/vyn_sandbox",
+        "max_retries": 3,
+        "timeout": 30,
+        "auto_correct": true
+    },
+    "memory": {
+        "enabled": true,
+        "database": "~/.config/vyn/vyn_brain.db",
+        "store_conversations": true,
+        "learn_patterns": true
+    },
+    "ui": {
+        "theme": "monokai",
+        "show_telemetry": true,
+        "auto_clear": false
+    },
+    "advanced": {
+        "cve_scanner": {
+            "enabled": true
+        },
+        "vision": {
+            "enabled": true
+        },
+        "rag": {
+            "enabled": false,
+            "scan_paths": []
+        }
+    }
+}
